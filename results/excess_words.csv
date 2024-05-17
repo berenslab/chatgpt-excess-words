@@ -1,0 +1,775 @@
+word,type,part_of_speech,comment
+abcd,content,noun,multiple different abbreviations
+accentuates,non-content,verb,
+aceis,content,noun,angiotensin-converting enzyme inhibitors
+achieving,non-content,verb,
+acknowledging,non-content,verb,
+across,non-content,preposition,
+acute,content,adjective,"""acute pneumonia"""
+additionally,non-content,adverb,
+address,non-content,verb,
+addresses,non-content,verb,
+addressing,non-content,verb,
+adept,non-content,adjective,
+adhered,non-content,verb,
+admet,content,noun,"absorption, distribution, metabolism, excretion and toxicity"
+adrd,content,noun,Alzheimer's disease and related dementias
+advancement,non-content,noun,
+advancements,non-content,noun,
+advancing,non-content,verb,
+adversarial,non-content,adjective,
+advocating,non-content,verb,
+aerosolization,content,noun,
+affirming,non-content,verb,
+afflicted,non-content,verb,
+agnostic,content,adjective,tumour-agnostic
+aiding,non-content,verb,
+akin,non-content,adjective,
+align,non-content,verb,
+aligning,non-content,verb,
+aligns,non-content,verb,
+alongside,non-content,preposition,
+alphafold,content,noun,
+amid,non-content,preposition,
+amidst,non-content,preposition,
+amos,content,noun,multiple different abbreviations
+amplifies,non-content,verb,
+analysis,non-content,noun,
+angiotensin,content,noun,
+announced,non-content,verb,
+anosmia,content,noun,
+antiseizure,content,noun,
+antiviral,content,adjective,
+aotearoa,content,noun,Māori-language name for New Zealand
+apixaban,content,noun,anticoagulant medication used to treat and prevent blood clots
+apologizes,non-content,verb,
+approach,non-content,noun,
+april,content,noun,Covid pandemic spread
+arbovirus,content,noun,
+arbs,content,noun,"abbreviations including: ARBs, angiotensin receptor antagonists, used to treat high blood pressure and heart failure"
+ards,content,noun,"abbreviations, ARDS, Acute respiratory distress syndrome"
+armonk,other,noun,"related to SPSS citations (which is by IBM, whose headquarters are in Armonk)"
+aspx,other,n/a,"appears in links, but this is partially artefact of data availability and trial registration statements not being filtered out"
+assess,non-content,verb,
+astrazeneca,content,noun,
+attr,content,noun,abbreviation for a type of amyloidosis disease
+augmenting,non-content,verb,
+authorization,content,noun,FDA drug authorization
+authorized,content,verb,
+autoencoder,content,noun,
+avenue,non-content,noun,
+avenues,non-content,noun,
+background,content/non-content,noun,can be both
+bacteroidota,content,noun,
+based,non-content,verb,
+betacoronavirus,content,noun,
+between,non-content,preposition,
+bibliometrix,content,noun,R package
+bioeconomy,content,noun,
+bioinspired,content,verb,
+biontech,content,noun,
+bioorthogonal,content,adjective,
+bivariable,content,adjective,
+blactx,content,noun,
+bolster,non-content,verb,
+bolstered,non-content,verb,
+bolstering,non-content,verb,
+booster,content,noun,
+boredom,content,noun,
+brier,content,noun,some score (MSE for predicted probabilites)
+browning,content,verb,
+burgeoning,non-content,verb,
+businesses,content,noun,
+capabilities,non-content,noun,
+capitalizing,non-content,verb,
+carapace,content,noun,
+carbapenemase,content,noun,
+catatonia,content,noun,
+categorizing,non-content,verb,
+cbioportal,content,noun,
+ccle,content,noun,"abbreviations, one for a type of lupus and Cancer Cell Line Encyclopedia (CCLE)"
+cerna,content,noun,"""competing endogenous RNA"""
+cfdna,content,noun,cell-free DNA
+cfps,content,noun,various abbreviations
+cgga,content,noun,Chinese Glioma Genome Atlas (CGGA)
+challenges,non-content,noun,
+chat,content,noun,"often as ChAT, but of course also in video chat, chat room, chat GPT...."
+chatbot,content,noun,
+chatbots,content,noun,
+chatgpt,content,noun,
+chloroquine,content,noun,
+cibersort,content,noun,
+circrna,content,noun,
+circrnas,content,noun,
+cisgender,content,noun,
+citespace,content,noun,
+clinical,content,adjective,
+clostridioides,content,noun,part of species name
+closures,content/non-content,noun,"used in many contexts, like businesses"
+cmax,content,noun,
+cnns,content,noun,
+codebook,content,noun,
+coii,content,noun,
+combustible,content,adjective,e-cigarette related
+commendable,non-content,adjective,
+compelling,non-content,adjective,
+complexities,content/non-content,noun,"complexity can be a term as in computational complexity, or a general term"
+comprehend,non-content,verb,
+comprehended,non-content,verb,
+comprehending,non-content,verb,
+comprehension,content,noun,diagnostic term as in reading comprehension
+comprehensive,non-content,adjective,
+concurrently,content/non-content,adverb,"in principle non-content, but often used in a specific context (concurrency of disease symptoms or medications)"
+concussions,content,noun,
+conferencing,content,verb,
+connor,content,noun,name
+consequently,non-content,verb,
+consolidates,non-content,verb,
+consolidations,content,noun,radiology term
+contagion,content,noun,
+contagious,content,adjective,
+containment,content,noun,
+contracting,content,verb,
+contrastive,content,adjective,
+contributing,non-content,verb,contributing factors 
+convalescence,content,noun,
+convalescent,content,adjective,covid related
+conversely,non-content,adverb,
+converting,content,verb,often part of enzyme-names
+convolution,content,noun,
+convolutional,content,adjective,
+coreq,content,noun,"abbreviatoin, Consolidated Criteria for Reporting Qualitative Studies (COREQ)"
+corona,content,noun,
+coronaviridae,content,noun,familiy of viruses
+coronavirus,content,noun,
+coronaviruses,content,noun,
+corp,other,noun,often part of citation that refer to a corporation like Microsoft corp.
+cough,content,noun,
+covid,content,noun,
+covs,content,noun,abbreviation for coronaviruses
+crafting,non-content,verb,
+crises,content,noun,
+crisis,content,noun,
+crispr,content,noun,
+crucial,non-content,adjective,
+culminating,non-content,verb,
+cuproptosis,content,noun,
+daratumumab,content,noun,
+dass,content,noun,Depression Anxiety Stress Scale (DASS)
+decarbonization,content,noun,
+declare,non-content,verb,
+declared,non-content,verb,
+decoder,content,noun,
+deductively,non-content,adverb,
+degs,content,noun,DEGs
+delineates,non-content,verb,
+delta,content,noun,
+delve,non-content,verb,
+delved,non-content,verb,
+delves,non-content,verb,
+delving,non-content,verb,
+demonstrated,non-content,verb,
+demonstrates,non-content,verb,
+demonstrating,non-content,verb,
+dependable,non-content,adjective,
+deps,content,noun,differentially expressed proteins (DEPs)
+desolvation,content,noun,
+detrimentally,non-content,adverb,
+dichalcogenides,content,noun,
+diminishes,non-content,verb,
+discern,non-content,verb,
+discerned,non-content,verb,
+discernible,non-content,adjective,
+discerning,non-content,verb,
+disease,content,verb,
+displaying,non-content,verb,
+distancing,content,verb,social distancing
+distinct,non-content,adjective,
+distinctions,non-content,noun,
+distinctive,non-content,adjective,
+diverse,non-content,adjective,
+doacs,content,noun,Direct oral anticoagulants (DOACs)
+druggable,content,adjective,
+during,non-content,preposition,
+dysgeusia,content,noun,
+easing,non-content,verb,
+ebola,content,noun,
+ebsco,content,noun,host of some literature databases
+ebscohost,content,noun,host of some literature databases
+economies,content,noun,
+economy,content,noun,
+efsa,content,noun,"European Food Safety Authority (EFSA), but also an artefact in few cases"
+egger,content,noun,method name
+elecsys,content,noun,assay name
+electrolyzer,content,noun,might be green hydrogen-related
+elevates,non-content,verb,
+elevating,non-content,verb,
+elucidate,non-content,verb,
+elucidates,non-content,verb,
+elucidating,non-content,verb,
+emax,content,noun,parameter name
+emerged,non-content,verb,
+emergencies,content,noun,
+emerges,non-content,verb,
+empagliflozin,content,noun,drug
+emphasises,non-content,verb,
+emphasising,non-content,verb,
+emphasize,non-content,verb,
+emphasizes,non-content,verb,
+emphasizing,non-content,verb,
+employed,non-content,verb,
+employing,non-content,verb,
+employs,non-content,verb,
+empowers,non-content,verb,
+enabling,non-content,verb,
+encapsulates,non-content,verb,
+encoder,content,noun,
+encompass,non-content,verb,
+encompassed,non-content,verb,
+encompasses,non-content,verb,
+encompassing,non-content,verb,
+encyclopedia,content,noun,
+endangering,non-content,verb,
+endeavors,non-content,noun,"""research endeavors"""
+endeavours,non-content,noun,BE version
+endogeneity,content,noun,
+enduring,non-content,verb,
+enhance,non-content,verb,
+enhancements,non-content,nount,
+enhances,non-content,verb,
+enhancing,non-content,verb,
+ensuring,non-content,verb,
+enzalutamide,content,noun,drug
+epicenter,content,noun,
+epidata,content,noun,analysis software
+epidemic,content,noun,
+equator,content,noun,
+equipment,content,noun,
+escalating,non-content,verb,
+essentials,non-content,noun,
+evapotranspiration,content,noun,
+exacerbating,non-content,verb,
+exceeding,non-content,verb,
+excels,non-content,verb,
+exceptional,non-content,adjective,
+exceptionally,non-content,adverb,
+exhibit,non-content,verb,
+exhibited,non-content,verb,
+exhibiting,non-content,verb,
+exhibits,non-content,verb,
+expedite,non-content,verb,
+expediting,non-content,verb,
+explainable,content,adverb,explainable AI
+exploration,non-content,noun,
+explores,non-content,verb,
+facilitated,non-content,verb,
+facilitating,non-content,verb,
+fatality,content,noun,
+favipiravir,content,noun,ebola drug repurposed for covid
+featuring,non-content,verb,
+feiii,content,noun,"Fe(III), Iron cation"
+ferroptosis,content,noun,type of cell death
+fight,non-content,noun/verb,
+findings,non-content,noun,
+finngen,content,noun,database like UK Biobank
+flatten,content,verb,"""flatten the curve"""
+flavivirus,content,noun,
+flesch,content,noun,score name
+focusing,non-content,verb,
+formidable,non-content,adjective,
+forthcoming,non-content,adjective,
+fostering,non-content,verb,
+fosters,non-content,verb,
+foundational,non-content,adjective,
+frontline,content,noun,"frontline staff (COVID!), or Frontline therapy refers to a patient's first CLL treatment"
+furin,content,noun,"type of protease, 'furin cleavage site' is COVID related"
+gabaa,content,noun,
+gabab,content,noun,
+garnered,non-content,verb,
+gauged,non-content,verb,
+gbsa,content,noun,abbreviation
+gepia,content,noun,"software, Gene Expression Profiling Interactive Analysis (GEPIA)"
+github,content,noun,
+globe,content,noun,
+governing,content,noun,
+governments,content,noun,
+grappling,non-content,verb,
+groundbreaking,non-content,adjective,
+groundwork,non-content,noun,
+gsea,content,noun,Gene set enrichment analysis
+guillain,content,noun,Guillain-Barré syndrome
+handwashing,content,noun,Covid mitigation
+hardest,non-content,noun,
+hardships,content,noun,
+harness,non-content,verb,
+harnesses,non-content,verb,
+harnessing,non-content,verb,
+havoc,content,noun,HAVoC is a pipeline utilizing several bioinformatic tools to perform multiple necessary analyses for investigating genetic variance among SARS-CoV-2 samples.
+hcov,content,noun,Human coronavirus (HCoV)
+hcws,content,noun,healthcare workers
+heightened,non-content,adjective,
+henan,content,noun,province in China
+hesitancy,content,noun,vaccine hesitancy
+hesitant,content,adjective,vaccine hesitancy
+heterogenous,content/non-content,adjective,can have technical meanings but can also be used in other contexts
+heterostructure,content,noun,
+hfref,content,noun,heart failure with reduced ejection fraction (HFrEF)
+highlighting,non-content,verb,
+highlights,non-content,verb,
+hiit,content,noun,high-intensity interval training (HIIT)
+hinges,non-content,verb,
+hinting,non-content,verb,
+hipsc,content,noun,hESCs and hiPSCs are both human pluripotent stem cells (hPSCs)
+hold,non-content,verb,
+holds,non-content,verb,
+hospitalized,content,verb,
+hotel,content,noun,related to Covid spread
+however,non-content,adverb,
+https,other,n/a,appears in links
+hubei,content,noun,province in China
+humanity,content,noun,
+hydroxychloroquine,content,noun,
+hydroxymethylcytosine,content,noun,
+hypercoagulability,content,noun,
+hyperinflammation,content,noun,
+hyperinflammatory,content,adjective,
+icgc,content,noun,International Cancer Genome Consortium (ICGC)
+icis,content,noun,Immune checkpoint inhibitors (ICIs)
+ideological,content,adjective,relating to some ideology
+ieee,content,noun,Mostly refers to IEEE Xplore
+illuminates,non-content,verb,
+illuminating,non-content,adjective,
+impact,non-content,noun,
+impactful,non-content,adjective,
+impacting,non-content,verb,
+impede,non-content,verb,
+impeding,non-content,adjective,
+imperative,non-content,adjective,
+impressive,non-content,adjective,
+inaccuracies,content,noun,refers to problems with data
+inadequately,non-content,adverb,
+inaugural,content/non-content,adjective,unsure
+including,non-content,preposition,
+incorporates,non-content,verb,
+incorporating,non-content,verb,
+inequitable,content,adjective,unfair; unjust
+infection,content,noun,
+infectiousness,content,noun,
+inherent,non-content,adjective,
+innovative,non-content,adjective,
+inquiries,non-content,noun,
+insights,non-content,noun,
+integrates,non-content,verb,
+interconnectedness,non-content,noun,
+interplay,non-content,noun,
+intersected,content,verb,"one set of genes was ""intersected"" with another set of genes"
+intersectionality,content,noun,"Intersectionality (or intersectional theory) is a term first coined in 1989 by American civil rights advocate and leading scholar of critical race theory, Kimberlé Williams Crenshaw"
+interspaced,content,verb,clustered regularly interspaced short palindromic repeat (CRISPR)
+into,non-content,preposition,
+intricacies,non-content,noun,
+intricate,non-content,adjective,
+intricately,non-content,adverb,
+intriguing,non-content,adjective,
+introduces,non-content,adjective,
+invaluable,non-content,adjective,
+investors,content,noun,economics term
+involves,non-content,verb,
+isrctn,content,noun,The ISRCTN registry is a primary clinical trial registry
+janssen,content,noun,Covid vaccine
+juxtaposed,non-content,adjective,
+katp,content,noun,ATP-sensitive potassium (KATP) channels
+kcat,content,noun,kcat is the catalytic constant
+koch,content,noun,Robert Koch
+lachnospiraceae,content,noun,
+lacticaseibacillus,content,noun,
+lactiplantibacillus,content,noun,
+lasso,content,noun,regularization
+latinx,content,noun,
+leone,content,noun,Sierra Leone - Ebola outbreak
+leverages,non-content,verb,
+leveraging,non-content,verb,
+liberia,content,noun,
+lipidomic,content,adjective,
+livelihoods,content,noun,
+llms,content,noun,large language model
+lncrna,content,noun,Long noncoding RNAs
+lncrnas,content,noun,Long noncoding RNAs
+lockdown,content,noun,
+lockdowns,content,noun,
+lombardy,content,noun,Covid outbreak in Italy
+loneliness,content,noun,
+lopinavir,content,noun,
+lowly,content,adjective,lowly expressed genes
+lstm,content,noun,long short-term memory
+luad,content,noun,Lung adenocarcinoma
+lymphocytopenia,content,noun,
+lymphopenia,content,noun,
+machining,content,adjective,machining process
+mafld,content,noun,“Metabolic dysfunction-associated fatty liver disease (MAFLD)” is the term suggested in 2020 to refer to fatty liver disease
+managing,content,verb,
+march,content,noun,Covid outbreak
+marking,content,noun,"Can refer to tumor marking, see ""tumor marker"""
+mash,content,noun,Metabolic dysfunction-associated steatohepatitis (MASH) is the replacement term for what used to be called nonalcoholic steatohepatitis
+mask,content,noun,Covid prevention
+masks,content,noun,Covid prevention
+masld,content,noun,Metabolic dysfunction-associated steatotic liver disease (MASLD) is the latest term for steatotic liver disease
+mechanisms,content,noun,general term used in biology
+medrxiv,content,n/a,medRxiv was launched in 2019
+mendelian,content,adjective,
+merges,non-content,verb,
+mers,content,noun,Middle East respiratory syndrome
+metacognition,content,noun,
+methylammonium,content,noun,
+meticulous,non-content,adjective,
+meticulously,non-content,adverb,
+microcephaly,content,noun,
+midst,non-content,preposition,
+minoritized,content,adjective,minoritized groups of people
+mirroring,content/non-content,verb,can have technical and non-technical meanings
+miseq,content,noun,Illumina MiSeq
+misinformation,content,noun,
+mitigate,content,verb,
+mitigated,content,verb,
+mitigates,content,verb,
+mitigating,content,verb,
+mitogenome,content,noun,
+model,content,noun,"statistical model, model organism, etc."
+moderating,content,adjective,moderating factors/effects
+moderna,content,noun,Covid vaccine
+molnupiravir,content,noun,
+monkeypox,content,noun,
+monoenergetic,content,adjective,
+mpox,content,noun,Mpox (formerly known as monkeypox)
+mpro,content,noun,SARS-CoV-2 main protease
+mpxv,content,noun,MPXV is an enveloped double-stranded DNA (dsDNA) virus
+mucormycosis,content,noun,
+multifaceted,non-content,adjective,
+multiracial,content,adjective,
+mxene,content,noun,"In materials science, MXenes are a class of two-dimensional inorganic compounds along with MBenes"
+myalgia,content,noun,
+nanosheet,content,noun,
+nasopharyngeal,content,adjectove,
+ncov,content,noun,2019-nCoV
+necessitate,non-content,verb,
+necessitates,non-content,verb,
+necessitating,non-content,verb,
+necessity,non-content,noun,
+neurofeedback,content,noun,
+neuromorphic,content,adjective,
+neutrality,content,noun,carbon neutrality
+news,content,noun,
+nhanes,content,noun,National Health and Nutrition Examination Survey
+nirmatrelvir,content,noun,
+nivolumab,content,noun,
+nmosd,content,noun,Neuromyelitis Optica Spectrum Disorder (NMOSD)
+nomogram,content,noun,a diagram representing the relations between three or more variable quantities
+notable,non-content,adjective,
+notably,non-content,advebr,
+noteworthy,non-content,adjective,
+nsqip,content,noun,ACS National Surgical Quality Improvement Program
+nuanced,non-content,adjective,
+nuances,non-content,noun,
+nucleocapsid,content,noun,
+observed,non-content,verb,
+offer,non-content,verb,
+offering,non-content,verb,
+offers,non-content,verb,
+omicron,content,noun,
+omnibus,content,adjective,omnibus statistical test
+online,content,adjective,
+opacities,content,noun,
+openai,content,noun,
+optimizing,non-content,verb,
+optoelectronics,content,noun,
+orchestrating,non-content,verb,
+organoid,content,noun,
+originality,content/non-content,noun,
+outbreak,content,noun,not only about covid
+outcomes,non-content,noun,
+overlooking,non-content,verb,
+overpotential,content,noun,electrochemistry term
+overwhelmed,non-content,verb,
+pandemic,content,noun,
+pandemics,content,noun,
+paracancerous,content,adjective,
+particularly,non-content,adverb,
+patients,content,noun,
+paving,non-content,verb,
+pcgs,content,noun,various abbreviations
+pembrolizumab,content,noun,drug
+perovskite,content,noun,mineral
+perovskites,content,noun,
+pfas,content,noun,Per- and polyfluoroalkyl substances are a group of synthetic organofluorine chemical compounds
+pfizer,content,noun,
+photobiomodulation,content,noun,
+phytochemistry,content,noun,
+phytoconstituents,content,noun,
+pinpoint,non-content,verb,
+pinpointed,non-content,verb,
+pinpointing,non-content,verb,
+pioneering,non-content,verb,
+pioneers,non-content,noun,
+pivotal,non-content,adjective,
+plastome,content,noun,
+please,other/artefact,adverb,"""please see"""
+pleiotropy,content,noun,
+pneumonia,content,noun,
+poised,non-content,verb,
+policymaking,content,noun,
+polydopamine,content,noun,
+polyfluoroalkyl,content,noun,
+posed,non-content,verb,
+poses,non-content,verb,
+posing,non-content,verb,
+postponed,non-content,verb,
+potential,non-content,adjective,
+precautionary,content,adjective,"""precautionary measures"""
+precautions,content,noun,
+precise,non-content,adjective,
+prepandemic,content,noun,
+preregistered,content,verb,
+pressing,non-content,adjective,
+presso,content,noun,MR-PRESSO: Mendelian Randomization Pleiotropy RESidual Sum and Outlier
+pretrained,content,verb,
+primarily,non-content,adjective,
+printer,content,noun,3d printers
+printing,content,verb,
+prioritize,content/non-content,verb,"edge case -- ""vaccine prioritizations"""
+prioritizing,content/non-content,verb,
+procalcitonin,content,noun,
+prominence,content/non-content,noun,"""linguistic prominence"" and some other terms"
+promise,non-content,verb,
+prompting,non-content,verb,
+proms,content,noun,Patient-reported outcome measures
+propelling,non-content,verb,
+prospero,content,noun,International Prospective Register of Systematic Reviews
+pseudotyped,content,vreb,
+psma,content,noun,Prostate-specific membrane antigen
+ptrend,content,other,p-value for trend
+pwms,content,noun,People with MS
+quarantine,content,noun,
+quarantined,content,verb,
+racialized,content,verb,
+racism,content,noun,
+radiographical,content,adjective,
+radiomics,content,noun,
+radium,content,noun,
+rdrp,content,noun,RNA-dependent RNA polymerase
+reactogenicity,content,noun,"reactogenicity is the capacity of a vaccine to produce common, ""expected"" adverse reactions"
+realizes,non-content,verb,
+realm,non-content,noun,
+realms,non-content,noun,
+redescribed,content,verb,redescribed species
+refine,non-content,verb,
+refining,non-content,verb,
+reframing,non-content,verb,
+reinfection,content,noun,
+reinfections,content,noun,
+remains,non-content,verb,
+remarkable,non-content,adjective,
+remdesivir,content,noun,
+remotely,content/non-content,adjective,
+renowned,non-content,adjective,
+reopening,content,noun,covid-related
+repurposed,content,adjective,repurposed medications
+research,non-content,noun,
+resnet,content,noun,
+respirator,content,noun,
+respirators,content,noun,
+respiratory,content,adjective,
+restrictions,content,noun,
+resuming,content/non-content,verb,can relate to covid pandemic
+rethink,non-content,verb,
+retrosigmoid,content,adjective,retrosigmoid approach - neurosurgery term
+revealed,non-content,verb,
+revealing,non-content,verb,
+review,content,noun,
+revolutionize,non-content,verb,
+revolutionizing,non-content,verb,
+revolves,non-content,verb,
+rhino,content,other,part of different words written with a hyphen
+ribonucleic,content,adjective,
+rollout,content,noun,
+rosenberg,content,name,Rosenberg self-esteem scale
+rrnas,content,noun,ribosomal RNA
+rstudio,content,noun,refers to R language
+safeguard,content,verb,
+safeguarding,content,verb,
+sars,content,noun,
+scfas,content,noun,short-chain fatty acid
+scielo,content,noun,bibliographic database
+scoping,content,noun,"""scoping review"" - a type of review"
+scrna,content,noun,small conditional RNA
+scrutinize,non-content,verb,
+scrutinized,non-content,verb,
+scrutinizing,non-content,verb,
+seahorse,content,noun,Seahorse Bioscience is a private company that develops and manufactures cellular bioenergetics analytical instruments
+seamless,non-content,adjective,
+seamlessly,non-content,adverb,
+seir,content,noun,susceptible-exposed-infected-recovered - infection model
+sentiment,content,noun,sentiment analysis
+serves,non-content,verb,
+severe,content,adjective,severe disease
+shandong,content,noun,province in China
+shap,content,noun,SHapley Additive exPlanations
+shapley,content,noun,SHapley Additive exPlanations
+shedding,non-content,verb,
+sheds,non-content,verb,
+shenzhen,content,noun,city in China
+shortages,content,noun,
+shortness,content,noun,"""shortness of breath"""
+showcased,non-content,verb,
+showcases,non-content,verb,
+showcasing,non-content,verb,
+shutdown,content,noun,Covid pandemic related
+sibs,content,noun,various abbreviations
+sierra,content,noun,Sierra Leone - ebola outbreak
+significant,content/non-content,adjective,"can mean ""statistically significant"" but not necessarily"
+signifying,non-content,verb,
+smallpox,content,noun,
+smell,content,noun,Covid leads to smell loss
+sneezing,content,noun,
+sofosbuvir,content,noun,
+solidarity,content,noun,
+sore,content,adjective,
+sota,content,noun,State of the art
+sourced,content,verb,
+spanned,non-content,verb,
+spanning,non-content,verb,
+specific,content,adjective,"used in hyphenated words like ""something-specific"""
+spike,content,noun,spike protein
+sponging,content,verb,Covid context
+spread,content,verb,
+spurred,non-content,verb,
+srmr,content,noun,standardized root mean squared residual
+ssgsea,content,noun,single-sample gene set enrichment analysis
+stands,non-content,verb,
+stata,content,noun,statistical software
+statement,non-content,noun,
+steatotic,content,adjective,steatosis = accumulation of fat in tissues
+storm,content,noun,cytokine storm
+strategically,non-content,adjective,
+streamline,non-content,verb,
+streamlines,non-content,verb,
+streamlining,non-content,verb,
+stretchable,content,adjective,"stretchable devices, electronics, etc"
+stringency,content,noun,Covid measures stringency
+strobe,content,noun,Strengthening the Reporting of Observational Studies in Epidemiology
+study,content,noun,
+sublineages,content,noun,
+subsequently,non-content,adverb,
+substantial,non-content,adjective,
+substantiated,non-content,verb,
+substantiates,non-content,verb,
+substantiating,non-content,verb,
+supplementary,content,adjective,"Supplementary Materials, medications, motor areas, etc."
+surge,content,noun,Covid context
+surmount,non-content,verb,
+surpassed,non-content,verb,
+surpasses,non-content,verb,
+surpassing,non-content,verb,
+suvmax,content,noun,Maximum Standard Unit Value (SUVmax) is an indicator for overall survival in lung cancer
+swab,content,noun,
+swift,non-content,adjective,
+syndrome,content,noun,
+synonym,content,noun,species taxonomy
+synonyms,content,noun,species taxonomy
+synonymy,content,noun,species taxonomy
+tailored,content,adjective,medical approaches tailored to the patient
+talens,content,noun,transcription activator-like effector nucleases
+talent,content,noun,
+tcga,content,noun,the cancer genome atlas
+tcmsp,content,noun,Traditional Chinese Medicine Systems Pharmacology
+telehealth,content,noun,
+telemedicine,content,noun,
+telerehabilitation,content,noun,
+therapeutic,content,adjective,
+therapeutical,content,adjective,
+thereby,non-content,adverb,
+these,non-content,pronoun,
+thorough,non-content,adjective,
+through,non-content,preposition,
+timepoint,content,noun,
+timer,content,noun,Tumor IMmune Estimation Resource
+tmax,content,noun,time to maximum concentration
+tmds,content,noun,temporomandibular disorders
+tocilizumab,content,noun,
+tofacitinib,content,noun,
+trainings,content,noun,
+transformative,non-content,adjective,
+transformer,content,noun,
+transformers,content,noun,
+transgender,content,adjective,
+transitioning,content,verb,different uses
+transmissibility,content,noun,
+transwell,content,noun,wetlab device
+triaging,content,noun,
+trna,content,noun,transport RNA
+trustworthy,content,adjective,trustworthy AI
+tweets,content,noun,
+twitter,content,noun,
+ukrainian,content,adjective,
+uncharted,non-content,adjective,
+uncovering,non-content,verb,
+underexplored,non-content,verb,
+underscore,non-content,verb,
+underscored,non-content,verb,
+underscores,non-content,verb,
+underscoring,non-content,verb,
+understanding,non-content,verb,
+unraveling,non-content,verb,
+unvaccinated,content,verb,
+unveil,non-content,verb,
+unveiled,non-content,verb,
+unveiling,non-content,verb,
+unveils,non-content,verb,
+uphold,non-content,verb,
+upholding,non-content,verb,
+urging,non-content,verb,
+using,non-content,verb,
+utilizes,non-content,verb,
+utilizing,non-content,verb,
+vaccinate,content,verb,
+vaccinated,content,verb,
+vaccination,content,noun,
+vaccinations,content,noun,
+vaccine,content,noun,
+vaccinees,content,noun,
+vaccines,content,noun,
+valuable,non-content,adjective,
+vaping,content,noun,
+variations,content,noun,"can be used in various contexts, but usually has technical meaning"
+various,non-content,adjective,
+varying,non-content,verb,
+vemurafenib,content,noun,
+ventilation,content,noun,
+ventilators,content,noun,
+verifies,non-content,verb,
+versatility,non-content,noun,
+videoconferencing,content,noun,
+vigilant,content,adjective,doctors being vigilant about some condition
+viral,content,adjective,
+vmax,content,noun,maximum velocity
+vosviewer,content,noun,VOSViewer is a software tool which can be used to conduct bibliometric analyses and create visualizations from selected database
+wandering,non-content,verb,
+wanfang,content,noun,Wanfang Data has been a leading information content and service provider in China
+waning,content,adjective,waning immunity
+warranting,non-content,verb,
+wearable,content,adjective,
+welded,content,adjective,welded joints
+were,non-content,verb,
+wgcna,content,noun,"Weighted correlation network analysis, also known as weighted gene co-expression network analysis"
+whatsapp,content,noun,
+while,non-content,preposition,
+whiteness,content,noun,about race
+within,non-content,adverb,
+workers,content,noun,relates to covid
+worried,content,verb,relates to covid (anxiety)
+worries,content,verb,related to covid
+wuhan,content,noun,covid related
+xgboost,content,noun,ML model
+yolo,content,noun,"""you only look once"", ML algorithm for object detection"
+youtube,content,noun,studies talking about youtube
+zika,content,noun,virus
+zikv,content,noun,virus
+zoom,content,noun,"related to covid, zoom the videocalling platform"
