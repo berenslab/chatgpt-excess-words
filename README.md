@@ -4,8 +4,6 @@
 
 Analysis code for the paper [Kobak et al. 2024, Delving into ChatGPT usage in academic writing through excess vocabulary](https://arxiv.org/abs/2406.07016).
 
-Usage instructions and preprocessed data will be shared shortly (in June).
-
 How to cite:
 ```
 @article{kobak2024delving,
