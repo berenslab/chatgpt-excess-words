@@ -7,7 +7,8 @@ import numpy as np
 def xml_import(xml_file):
     """Parses some elements of the metadata in PubMed XML files.
     Parses the following elements of each paper stored in the input `xml_file`, and stores them in a pandas 
-    DataFrame. Elements parsed: PMID, Title, Abstract, Language, Journal, Date, First author name, Last authors name, ISSN.
+    DataFrame. Elements parsed: PMID, Title, Abstract, Language, Journal, Date, First author name, 
+    Last authors name, ISSN, Affiliation first author, Affiliation last author.
     
     Parameters
     ----------
@@ -36,7 +37,9 @@ def xml_import(xml_file):
     - Date (stored in <PubDate>).
     - First author first name (stored in <ForeName>, child of <AuthorList>, child of <Author>).
     - Last authors first name (stored in <ForeName>, child of <AuthorList>, child of <Author>).
-    - ISSN (stored in <ISSN>)
+    - ISSN (stored in <ISSN>).
+    - Affiliation first author (stored in <AffiliationInfo>). 
+    - Affiliation last author (stored in <AffiliationInfo>).
     
     Details about information extracion: 
     - PMID: If there is no tag <PMID>, it will add 'no tag'. If there is more than one <PMID>,
@@ -67,9 +70,9 @@ def xml_import(xml_file):
     
     - ISSN (stored in <ISSN>): If there is no tag <ISSN>, it will add 'no tag'. If <ISSN> contains no text, it will add '' (empty string). 
 
-    - Affiliation first author: 
+    - Affiliation first author 
 
-    - Affiliation last author:
+    - Affiliation last author
 
     """
     
@@ -350,9 +353,7 @@ def xml_import(xml_file):
 
 def import_all_files(path, order_files=False):
     """Imports all xml files from a directory into a combined dataframe using the function xml_import.
-    
-    WARNING: I changed the name of the xml_import function that also includes the first names of first and last authors and ISSN, so now this function works calling the old function. A new import_all_files function needs to be created that calls the new xml_import_with_authors_ISSN.
-    
+  
     Parameters
     ----------
     path : srt 
@@ -395,32 +396,30 @@ def import_all_files(path, order_files=False):
 
 
 def improved_coloring(journals, dict_words_colors):
-    """ Creates coloring based on words appearing in a list of documents.
-    It creates an array with colors, assigning a color to each paper depending on whether it contains a word in its journal title from the keys in ` dict_words_colors`. 
+    """ Creates labels and colors based on words appearing in a list of documents.
+    It creates an array with labels and another one with colors, assigning a label to each instance depending on 
+    whether it contains a word or not. In this case, each instance is a paper and it looks for keywords in its
+    journal title (keys in ` dict_words_colors`). 
     
-    IMPORTANT REMARK: if the journal name contains two words belonging to the word list, the color of the word
+    IMPORTANT REMARK: if the journal name contains two words belonging to the word list, the label and color of the word
     located the latest in the list will be assigned to it (first, the first word's color is assigned and then 
     the second overwrites the first).
     
     Parameters
     ----------
-    journals : dataframe of str
-        Dataframe with the journal names of the papers, or any other corpus where to look for the words.
+    journals : pandas series of str
+        Series with the journal names of the papers, or any other corpus where to look for the words.
     dict_words_colors : dict
         Dictionary matching words to colors (legend). The keys are the words and the values are the colors.
     
     
     Returns
     -------
-    labels_with_unlabeled : list of str fo len (n_journals)
+    labels_with_unlabeled : list of str of len (n_journals)
         List or labels (words) for all instances including label 'unlabeled'.
     colors : array
         Colors for each paper.
             
-    See Also
-    --------
-    automatic_coloring
-    
     """
     
     
@@ -455,12 +454,13 @@ def improved_coloring(journals, dict_words_colors):
 def mapping_countries(affiliations, dict_countries):
     """Maps countries to affiliation strings.
     The affiliation strings include the country name, so it searches for all possible country names in the strings.
-    This produces a list of countries, correcting and assigning only one out of all possible different country names (e.g., "US" and "USA").
+    This produces a list of countries, correcting and assigning only one out of all possible different country names 
+    (e.g., "US" and "USA").
 
     Parameters
     ----------
-    affiliations : dataframe of str
-        Dataframe with the affiliation names of the papers.
+    affiliations : pandas series of str
+        Series with the affiliation names of the papers.
     dict_countries : dict
         Dictionary matching country to number (legend).
 
@@ -519,18 +519,17 @@ def mapping_states(affiliations, dict_countries):
 
     Parameters
     ----------
-    affiliations : dataframe of str
-        Dataframe with the affiliation names of the papers.
+    affiliations : pandas series of str
+        Series with the affiliation names of the papers.
     dict_countries : dict
-        Dictionary matching country to number (legend).
-
+        Dictionary matching state to number (legend).
 
     Returns
     -------
     labels : list of str fo len (affiliations)
         List of states for all papers including 'unknown'.
     numbers : array
-        Numbers for each paper. Each number corresponds to a country.
+        Numbers for each paper. Each number corresponds to a state.
 
     See Also
     --------
