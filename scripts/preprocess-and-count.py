@@ -21,7 +21,6 @@ def load_data(start_year=2010):
     print('Assembling the dataframe...', flush=True)
 
     df1["AbstractText"] = df1_abstracts["AbstractText"]
-    df1["PMID"] = pd.to_numeric(df1["PMID"])
 
     df1.drop(columns=np.setdiff1d(df1.columns, df2.columns), inplace=True)
 
