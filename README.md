@@ -25,6 +25,6 @@ All excess words that we identified from 2013 to 2024 are listed in `results/exc
    ```
    (~0.5 hours), and then does yearly aggregation.
 3. The input to the `scripts/preprocess-and-count.py` script are three files:
-   * `pubmed_landscape_data_2024_v2.zip` and `pubmed_landscape_abstracts_2024.zip` containing PubMed data from the end-of-2023 baseline, available at https://zenodo.org/doi/10.5281/zenodo.7695389 repository associated with our _Patterns_ paper (https://www.cell.com/patterns/fulltext/S2666-3899(24)00076-X) "The landscape of biomedical research";
+   * `pubmed_landscape_data_2024_v2.zip` and `pubmed_landscape_abstracts_2024.zip` containing PubMed data from the end-of-2023 baseline, available at [the repository](https://zenodo.org/doi/10.5281/zenodo.7695389) associated with our _Patterns_ paper ["The landscape of biomedical research"](https://www.cell.com/patterns/fulltext/S2666-3899(24)00076-X);
    * and `pubmed_daily_updates_2024_v2.zip` containg PubMed data from January--June 2024.
-5. This last file is constructed by the `scripts/process-daily-updates.ipynb` notebook that takes all daily XML files from https://ftp.ncbi.nlm.nih.gov/pubmed/updatefiles/ until 2024-06-30 (from `pubmed24n1220.xml.gz` to `pubmed24n1456.xml.gz`) as input.
+5. This last file is constructed by the `scripts/process-daily-updates.ipynb` notebook that takes all daily XML files from https://ftp.ncbi.nlm.nih.gov/pubmed/updatefiles/ until 2024-06-30 (from `pubmed24n1220.xml.gz` to `pubmed24n1456.xml.gz`) as input. These files have to be previously downloaded from the link above, unzipped, and stored in a directory, from which the `scripts/process-daily-updates.ipynb` notebook will read, combine, and save as a single dataframe (`pubmed_landscape_data_2024_v2.zip`).
