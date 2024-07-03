@@ -427,7 +427,7 @@ def compute_excess_gaps():
             cutoff_counts[i, j] = np.sum(np.sum(X[ind, :][:, ind_words], axis=1) > 0)
     print('')
     
-    np.save(RESULTS_FOLDER + 'cutoff_counts.npy', cutoff_counts)
+    np.save(RESULTS_FOLDER + 'yearly-counts-cutoff.npy', cutoff_counts)
     
 
 def compute_excess_gaps_subgroups():
