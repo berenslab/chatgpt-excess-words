@@ -15,8 +15,10 @@ print(variables_path.resolve())
 berenslab_data_path = Path("/gpfs01/berens/data/data/pubmed_processed")
 
 # import data
-df = pd.read_csv(berenslab_data_path / "pubmed_baseline_2025.zip")
-
+df = pd.read_parquet(
+    berenslab_data_path / "pubmed_baseline_2025.parquet.gzip",
+    engine="pyarrow",
+)
 # extract abstract texts from years 2022-2024
 abstracts = df["AbstractText"][(df.Year >= 2022) & (df.Year <= 2024)].tolist()
 print(f"There are {len(abstracts)} papers in 2022-2024")
