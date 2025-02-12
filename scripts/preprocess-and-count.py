@@ -14,26 +14,27 @@ INPUT_FOLDER = '/gpfs01/berens/data/data/pubmed_processed/'
 def load_data(start_year=2010):
     print('Loading data...', flush=True)
 
-    df1 = pd.read_csv(INPUT_FOLDER + "pubmed_landscape_data_2024_v2.zip")
-    df1_abstracts = pd.read_csv(INPUT_FOLDER + "pubmed_landscape_abstracts_2024.zip")
-    df2 = pd.read_csv(INPUT_FOLDER + "pubmed_daily_updates_2024_v2.zip")
-
-    print('Assembling the dataframe...', flush=True)
-
-    df1["AbstractText"] = df1_abstracts["AbstractText"]
-
-    df1.drop(columns=np.setdiff1d(df1.columns, df2.columns), inplace=True)
-
-    df = pd.concat((df1, df2))
-    df = df.groupby(["PMID"]).last()
-   
-    print(f'Found {len(df)} unique papers.', flush=True)  # 24105518
+    df = pd.read_csv(INPUT_FOLDER + "pubmed_baseline_2025.zip")
+    print(f'Found {len(df)} papers.', flush=True)  # 24814136
     
     df = df[(df.Year >= start_year) & (df.Year <= 2024)]
-
-    print(f'Kept {len(df)} papers from {start_year}--2024.', flush=True)  # 14448711
+    print(f'Kept {len(df)} papers from {start_year}--2024.', flush=True)  # 15103887
     
     return df
+    
+    # OBSOLETE: Needed for merging PubMed daily updates
+    # df1 = pd.read_csv(INPUT_FOLDER + "pubmed_landscape_data_2024_v2.zip")
+    # df1_abstracts = pd.read_csv(INPUT_FOLDER + "pubmed_landscape_abstracts_2024.zip")
+    # df2 = pd.read_csv(INPUT_FOLDER + "pubmed_daily_updates_2024_v2.zip")
+
+    # print('Assembling the dataframe...', flush=True)
+
+    # df1["AbstractText"] = df1_abstracts["AbstractText"]
+
+    # df1.drop(columns=np.setdiff1d(df1.columns, df2.columns), inplace=True)
+
+    # df = pd.concat((df1, df2))
+    # df = df.groupby(["PMID"]).last()
 
 
 def cleanup_abstracts_inplace(df):
@@ -51,8 +52,9 @@ def cleanup_abstracts_inplace(df):
     df.loc[ind, "AbstractText"] = ""
 
     print(
-        f"Removing {np.sum(ind)} abstracts (corrections/errata/retractions/etc).\n"
-    )  # 3431
+        f"Removing {np.sum(ind)} abstracts (corrections/errata/retractions/etc).\n", 
+        flush=True
+    )  # 3514
 
     # Abstracts filter
 
@@ -338,22 +340,25 @@ def cleanup_abstracts_inplace(df):
 
             s = [ss[:75] for ss in s.ravel() if type(ss) == str]
             if len(s) > 0:
-                print(f"   Found {len(s)} abstract(s) with string(s) to replace:")
+                print(
+                    f"   Found {len(s)} abstract(s) with string(s) to replace:", 
+                    flush=True
+                )
                 print("      " + "\n      ".join(s[:5]) + "\n", flush=True)
             else:
-                print("   Found nothing to replace.\n")
+                print("   Found nothing to replace.\n", flush=True)
             df.loc[ind, "AbstractText"] = df[ind].AbstractText.str.replace(
                 replace_string, to_replace[search_string][replace_string], regex=True
             )
 
-    print(f"In total {np.sum(all_affected_abstracts)} were edited.")  # 270189
+    print(f"In total {np.sum(all_affected_abstracts)} were edited.", flush=True)  # 270189
 
 
 def vectorize_abstracts(df):
-    vectorizer = CountVectorizer(binary=True)
+    vectorizer = CountVectorizer(binary=True, min_df=1e-6)
     X = vectorizer.fit_transform(df.AbstractText.values)  # ~30 min
 
-    print(f"Count matrix computed: {X.shape}")  # 14448711 x 4179571
+    print(f"Count matrix computed: {X.shape}", flush=True)  # 14448711 x 4179571
 
     pickle.dump(X, open(RESULTS_FOLDER + "counts.pkl", "wb"))
 
@@ -367,7 +372,11 @@ def vectorize_abstracts(df):
         counts[:, i] = np.array(np.sum(X[ind, :], axis=0)).ravel()
         totals[i] = np.sum(ind)
 
-    pickle.dump([words, years, counts, totals], open(RESULTS_FOLDER + "yearly-counts.pkl", "wb"))
+    df = pd.DataFrame(
+        dict(zip(["word"] + list(years), [words] + list(counts.astype(int).T)))
+    )
+    df.loc[len(df)] = [""] + list(totals.astype(int))
+    df.to_csv(RESULTS_FOLDER + "yearly-counts.csv.gz", index=False)
 
     return X, words, years, counts, totals
     
@@ -420,17 +429,17 @@ def compute_excess_gaps():
     cutoff_counts = np.zeros((len(cutoffs), years.size))
     
     for i, cutoff in enumerate(cutoffs):
-        print('.', end='')
+        print('.', end='', flush=True)
         ind_words = np.isin(words, chatgpt_words[chatgpt_words_f < cutoff])
         for j, year in enumerate(years):
             ind = df.Year == year
             cutoff_counts[i, j] = np.sum(np.sum(X[ind, :][:, ind_words], axis=1) > 0)
-    print('')
+    print('', flush=True)
     
     np.save(RESULTS_FOLDER + 'yearly-counts-cutoff.npy', cutoff_counts)
     
 
-def compute_excess_gaps_subgroups():
+def compute_excess_gaps_subgroups(rare_threshold=0.01, output_filename="yearly-counts-subgroups.csv"):
     subsetWords, ratios, diffs, x = compute_excess(2024)
 
     ind = np.log10(ratios) > np.log10(2) - (np.log10(x) + 4) * (np.log10(2) / 4)
@@ -446,7 +455,7 @@ def compute_excess_gaps_subgroups():
         [x[ind][i] for i, w in enumerate(words[subsetWords][ind]) if word2type[w] == 'style']
     )
 
-    chatgptwords_rare = chatgpt_words[chatgpt_words_f < 0.01]
+    chatgptwords_rare = chatgpt_words[chatgpt_words_f < rare_threshold]
 
     chatgptwords_common = [
         'exhibited', 'crucial', 'additionally', 'within', 'notably', 
@@ -470,10 +479,17 @@ def compute_excess_gaps_subgroups():
             save_label = '"' + label + '"'
         else:
             save_label = label
-        print(f'{labeltype},{save_label},' + ','.join(group_counts.ravel().astype(str)), file=f)
-        print(f'{labeltype},{save_label},' + ','.join(group_counts.ravel().astype(str)))
+        print(
+            f'{labeltype},{save_label},' + ','.join(group_counts.ravel().astype(str)),
+            file=f, 
+            flush=True
+        )
+        print(
+            f'{labeltype},{save_label},' + ','.join(group_counts.ravel().astype(str)),
+            flush=True
+        )
 
-    with open(RESULTS_FOLDER + 'yearly-counts-subgroups.csv', 'w') as f:
+    with open(RESULTS_FOLDER + output_filename, 'w') as f:
         print(
             'grouptype,group,2010_common,2011_common,2012_common,2013_common,'
             '2014_common,2015_common,2016_common,2017_common,2018_common,'
@@ -484,7 +500,8 @@ def compute_excess_gaps_subgroups():
             '2012_total,2013_total,2014_total,2015_total,2016_total,2017_total,'
             '2018_total,2019_total,2020_total,2021_total,2022_total,2023_total,'
             '2024_total',
-            file=f
+            file=f,
+            flush=True
         )
 
         ind = np.ones(len(df), dtype=bool)
@@ -587,10 +604,43 @@ cleanup_abstracts_inplace(df)
 
 X, words, years, counts, totals = vectorize_abstracts(df)
 
-# X = pickle.load(open(RESULTS_FOLDER + "counts.pkl", "rb"))
-# words, years, counts, totals = pickle.load(open(RESULTS_FOLDER + "yearly-counts.pkl", "rb"))
+# X = pickle.load(open("counts.pkl", "rb"))
+
+# df = pd.read_csv(RESULTS_FOLDER + "yearly-counts.csv.gz")
+# words = df.word.values[:-1].astype(str)
+# years = df.columns[1:].astype(int)
+# counts = df.values[:-1, 1:].astype(int)
+# totals = df.values[-1, 1:].astype(int)
 
 compute_excess_gaps()
 
-compute_excess_gaps_subgroups()
+compute_excess_gaps_subgroups(0.02, "yearly-counts-subgroups.csv")
 
+
+## Below is a stand-along script to analyze the Covid frequency gap
+
+# import pandas as pd
+# import numpy as np
+# import pickle
+    
+# df = pd.read_csv("yearly-counts.csv.gz")
+# words = df.word.values[:-1].astype(str)
+# years = df.columns[1:].astype(int)
+# counts = df.values[:-1, 1:].astype(int)
+# totals = df.values[-1, 1:].astype(int)
+
+# X = pickle.load(open("counts.pkl", "rb"))
+
+# df = pd.read_csv("/gpfs01/berens/data/data/pubmed_processed/pubmed_baseline_2025.zip")
+# df = df[(df.Year >= 2010) & (df.Year <= 2024)]
+
+covid_words = ["covid", "pandemic", "coronavirus", "sars"]
+ind_covid_words = np.isin(words, covid_words)
+group_counts = np.zeros((2, years.size), dtype=int)
+for i, year in enumerate(years):
+     ind = df.Year == year
+     group_counts[0, i] = np.sum(np.sum(X[ind, :][:, ind_covid_words], axis=1) > 0)
+     group_counts[1, i] = np.sum(ind)
+print(group_counts)
+f = (group_counts[0].astype(float) + 1) / (group_counts[1] + 1)
+print(f * 100)
